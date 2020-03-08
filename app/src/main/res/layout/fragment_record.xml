@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Record">
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/recordProgressBar"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-light"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/recordProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recordProgressBar" />
+
+    <ProgressBar
+        android:id="@+id/recordProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/record_progress_bar_background"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/record_progress_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/StartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/microphone" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="40dp"
+        android:text="Tap the button to start record"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recordProgressBar"
+        app:layout_constraintVertical_bias="0.898" />
+</androidx.constraintlayout.widget.ConstraintLayout>
